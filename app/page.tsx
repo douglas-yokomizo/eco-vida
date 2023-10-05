@@ -95,7 +95,7 @@ export default function Home() {
               <a href="#">Dicas e Desafios</a>
             </li>
             <li className='hover:animate-bounce hover:text-green-400'>
-              <a href="#">Sobre nós</a>
+              <a href="#">Metas</a>
             </li>
             <li className='hover:animate-bounce hover:text-green-400'>
               <a href="#">Contato</a>
@@ -144,7 +144,7 @@ export default function Home() {
             </div>
 
           </div>
-          <div className='BUTTONS flex gap-12'>
+          <div className='BUTTONS mb-4 flex gap-12'>
             <button onClick={() => setIsOpen(!isOpen)} className='w-32 bg-slate-50 rounded-3xl p-1 hover:scale-110 transition font-bold'>
               Calcular sua emissão
             </button>
@@ -156,7 +156,7 @@ export default function Home() {
             <div className='fixed top-0 left-1/2 -translate-x-1/2 max-w-[90%] w-full h-full flex items-center justify-center'>
               <div className="MODAL-CONTENT bg-white rounded-2xl">
                 <button className="CLOSE cursor-pointer px-2 py-1 text-xl text-red-500 hover:scale-125" onClick={() => setIsOpen(!isOpen)}>X</button>
-                <h2 className='text-center text-xl font-bold mb-4 text-green-700'>Calculadora de Emissão de Carbono</h2>
+                <h2 className='text-center text-lg font-bold mb-4 text-green-700'>Calculadora de Emissão de Carbono</h2>
                 <form onSubmit={handleSubmit} className='flex flex-col items-center justify-center gap-6'>
                   <label className='font-bold flex justify-between items-center w-2/3'>
                     Km&apos;s percorridos com transporte:

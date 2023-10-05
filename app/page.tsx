@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image'
 import appIcon from '@/public/icon-forest.png'
 import heroImage from '@/public/green-planet.png'
@@ -15,14 +15,14 @@ export default function Home() {
     consumo: 0,
   });
 
-  const handleChange = (event) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setFormState({
       ...formState,
       [event.target.name]: event.target.value,
     });
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const transporteEmissao = formState.transporte * 0.2;
     const energiaEmissao = formState.energia * 0.5;
@@ -79,7 +79,7 @@ export default function Home() {
                   <a href="#">Dicas e Desafios</a>
                 </li>
                 <li className="border-b border-gray-400 my-8 uppercase">
-                  <a href="#">Sobre nós</a>
+                  <a href="#">Metas</a>
                 </li>
                 <li className="border-b border-gray-400 my-8 uppercase">
                   <a href="#">Contato</a>
@@ -127,7 +127,7 @@ export default function Home() {
           <h2 className='text-white lg:text-start lg:text-3xl text-2xl text-center lg:order-2 lg:w-3/5 p-8'>
             Compense a sua pegada de carbono e contribua para um mundo mais sustentável
           </h2>
-          <Image src={heroImage} className='lg:w-1/3 lg:order-1' width={320} alt='green world' />
+          <Image src={heroImage} className='lg:w-1/3 lg:order-1 animate-spin-slow' width={320} alt='green world' />
         </section>
         <section className='lg:hidden flex flex-col items-center justify-center gap-12'>
           <div className="flex flex-col items-center p-4">
@@ -170,7 +170,7 @@ export default function Home() {
                     Consumo de carne em kg por semana:
                     <input className='max-w-[25%] w-full focus:outline-none text-right border-b-2' type="number" name="consumo" value={formState.consumo} onChange={handleChange} />
                   </label>
-                  <button className='bg-green-500 p-3 rounded-3xl my-4' type="submit">Calcular Emissão</button>
+                  <button className='bg-green-500 p-3 rounded-3xl my-4' type="submit">Compensar Emissão</button>
                 </form>
               </div>
             </div>

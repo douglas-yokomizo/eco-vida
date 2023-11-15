@@ -22,7 +22,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ## Learn More
 
-## [See it live](https://eco-vida-giox.vercel.app/)
+## [See it live in mobile view](https://eco-vida-giox.vercel.app/)
 
 To learn more about Next.js, take a look at the following resources:
 
